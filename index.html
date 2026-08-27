@@ -53,5 +53,6 @@
     function applyColors(){const s=document.documentElement.style;const pairs=[['Bg','--cream'],['Form','--form'],['Button','--button']];pairs.forEach(([key,variable])=>{const v=localStorage.getItem('derson-color-'+key);if(v)s.setProperty(variable,v)})}applyColors();document.querySelector('#saveColors').onclick=()=>{[['Bg','colorBg'],['Form','colorForm'],['Button','colorButton']].forEach(([k,id])=>localStorage.setItem('derson-color-'+k,document.querySelector('#'+id).value));applyColors();document.querySelector('#saveMsg').textContent='Cores atualizadas.'};
     document.querySelector('#saveIcon').onclick=()=>{localStorage.setItem('derson-flaticon',document.querySelector('#flaticonUrl').value);document.querySelector('#saveMsg').textContent='URL do ícone salva.'};draw();
   </script>
+  <script>document.querySelectorAll('.story-template small').forEach(el=>el.textContent='Deputado Federal + Deputado Estadual');</script>
 </body>
 </html>
